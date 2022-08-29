@@ -9,7 +9,7 @@ pipeline {
                     """
                 bat 'call git add file.txt'
                 bat 'call git commit -am "Added new text file"'
-                bat 'call git push origin main'
+                bat 'call git push origin HEAD:main'
             }
         }
     }
