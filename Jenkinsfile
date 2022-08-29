@@ -3,7 +3,7 @@ pipeline {
    stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
+                echo 'Hello World !!'
                 bat """
                     echo "something" > file.txt
                     """
