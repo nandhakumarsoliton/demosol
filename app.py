@@ -37,7 +37,7 @@ def logme(message):
 
     # Write content to the file
     content = "This is a "+ message
-    with open(file_path, "w") as file:
+    with open(file_path, "a") as file:
         file.write(content+ "\n")
     print("File stored at:", file_path)
 
