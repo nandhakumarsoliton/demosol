@@ -7,14 +7,14 @@ def index():
     return "First Web App here! Hellooo :-) "
 
 @app.route("/like/")
-def next():
+def like():
 
     logme("like")
 
     return "Like recorded"
 
 @app.route("/dislike/")
-def next():
+def dislike():
     
     logme("dislike")
     return "DisLike recorded"
@@ -22,7 +22,7 @@ def next():
 
 def logme(message):
     # Get the current user's home directory
-    home_dir = "/home/logs"
+    home_dir = "//home//logs"
 
     # Define the file name and path within the user's home directory
     file_name = message +".txt"
