@@ -11,7 +11,7 @@ def next():
     import os
 
     # Get the current user's home directory
-    home_dir = "/home"
+    home_dir = os.path.expanduser("~")
 
     # Define the file name and path within the user's home directory
     file_name = "example.txt"
