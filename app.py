@@ -28,7 +28,13 @@ def logme(message):
     file_name = message +".txt"
 
     file_path = os.path.join(home_dir, file_name)
-    
+    if not os.path.exists(home_dir):
+        os.makedirs(home_dir)
+
+
+    # if not os.path.exists("logs"):
+    #     os.mkdir("logs")
+
     # Write content to the file
     content = "This is a "+ message
     with open(file_path, "w") as file:
