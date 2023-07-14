@@ -2,9 +2,16 @@ from flask import Flask
 import os
 app = Flask(__name__)
 
+from dotenv import load_dotenv
+load_dotenv(os.path.join(os.getcwd(),"demo.env"))
+
+
 @app.route("/")
 def index():
-    return "First Web App here! Hellooo :-) "
+    key = os.getenv("MY_KEY")
+    sec = os.getenv("SECRET")
+    #sec = os.getcwd()
+    return "First Web App here! Hellooo :-) " + str(key) + str(sec)
 
 @app.route("/like/")
 def like():
