@@ -2,15 +2,12 @@ from fastapi import FastAPI
 
 import uvicorn
 
-app = FastAPI()
+dapp = FastAPI()
 
-@app.get("/")
+@dapp.get("/value")
 def read_root():
     try:
-        
         return {"Status": "Dummy Me running"}
     except Exception as e:
         return {"Status": "Failed to install Dummy me", "Error": str(e)}
 
-if(__name__ == "__main__"):
-    uvicorn.run(app)
